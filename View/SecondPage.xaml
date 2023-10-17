@@ -5,7 +5,7 @@
              x:Class="MauiApp3.View.SecondPage"
              Title="SecondPage">
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout x:Name="allView">
             <Label x:Name="welcomeText" FontSize="Large" Margin="16" />
             <CollectionView>
                 <CollectionView.ItemsSource>
