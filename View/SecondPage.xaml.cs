@@ -36,10 +36,16 @@ public partial class SecondPage : ContentPage
 		image.HeightRequest = 120;
 		image.Margin = new Thickness(8, 4, 8, 4);
 
-		Label nazwa = new Label();
+		Label nazwa = new Label() 
+		{
+			FontSize = 30	
+		};
         Label skladniki = new Label();
         Label rozmiar = new Label();
-        Label cena = new Label();
+        Label cena = new Label() 
+		{ 
+			FontSize = 25
+		};
 
 		nazwa.Text = pizza.Nazwa;
 		skladniki.Text = pizza.Skladniki;
@@ -56,6 +62,9 @@ public partial class SecondPage : ContentPage
 
 		allView.Add(view);
 
+ 		/* Zaladuj  dane z pliku pizza.txt i na kazda linijke
+ 		 poza pierwsza, ktora jest nazwami kolumn, utworz
+		kazdy obiekt z danymi i wyswietl w aplikacji*/
 
     }
 }
