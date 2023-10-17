@@ -1,0 +1,6 @@
+﻿Zdjecie;Nazwa;Składniki;Cena;Rozmiar
+pizza1.jpg;Deliciosa;Sos pomidorowy, Ser, Pieczarki, Szynka;23.90;32
+https://www.przyslijprzepis.pl/media/cache/big/uploads/media/recipe/0007/11/domowa-pizza-kebab.jpeg;Fungi;Sos pomidorowy, Ser, Pieczarki, Papryka czerwona, Cebula;32.90;32
+https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/ciasto_na_pizze_05_0.jpg;Margaritta;Sos pomidorowy, Ser;20.90;32
+https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/aadbcc1b4eff6d3d2a32361f1ad74c72/Derivates/755a4e73c9b36ccdaaa5886cd70948fae9ae7e03.jpg;Szefa;Sos pomidorowy, Ser, Pieczarki, Szynka, Papryka, Cebula, Kukurydza, Kurczak;34.90;32
+https://prostepesto.pl/wp-content/uploads/2021/09/pizza-al-tonno.jpg;Mięsna;Sos pomidorowy, Ser, Szynka, Pepperoni, Kurczak, Bekon;32.90;32

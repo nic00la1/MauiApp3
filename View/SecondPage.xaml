@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MauiApp3.Model"
+             x:Class="MauiApp3.View.SecondPage"
+             Title="SecondPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label x:Name="welcomeText" FontSize="Large" Margin="16" />
+            <CollectionView>
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type model:PizzaModel}">
+                        <model:PizzaModel 
+                            Zdjecie="pizza1.jpg"
+                            Nazwa="Deliciosa" 
+                            Skladniki="Sos pomidorowy, Ser, Pieczarki, Szynka"
+                            Cena="23.90"
+                            Rozmiar="32" />
+                        <model:PizzaModel 
+                            Zdjecie="https://www.przyslijprzepis.pl/media/cache/big/uploads/media/recipe/0007/11/domowa-pizza-kebab.jpeg"
+                            Nazwa="Fungi" 
+                            Skladniki="Sos pomidorowy, Ser, Pieczarki, Papryka czerwona, Cebula"
+                            Cena="32.90"
+                            Rozmiar="32"></model:PizzaModel>
+                        <model:PizzaModel 
+                            Zdjecie="https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/ciasto_na_pizze_05_0.jpg"
+                            Nazwa="Margaritta" 
+                            Skladniki="Sos pomidorowy, Ser"
+                            Cena="20.90"
+                            Rozmiar="32"></model:PizzaModel>
+                        <model:PizzaModel 
+                            Zdjecie="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/aadbcc1b4eff6d3d2a32361f1ad74c72/Derivates/755a4e73c9b36ccdaaa5886cd70948fae9ae7e03.jpg"
+                            Nazwa="Szefa" 
+                            Skladniki="Sos pomidorowy, Ser, Pieczarki, Szynka, Papryka, Cebula, Kukurydza, Kurczak"
+                            Cena="34.90"
+                            Rozmiar="32"></model:PizzaModel>
+                        <model:PizzaModel 
+                            Zdjecie="https://prostepesto.pl/wp-content/uploads/2021/09/pizza-al-tonno.jpg"
+                            Nazwa="Mięsna" 
+                            Skladniki="Sos pomidorowy, Ser, Szynka, Pepperoni, Kurczak, Bekon"
+                            Cena="32.90"
+                            Rozmiar="32"></model:PizzaModel>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout>
+                            <Image Source="{Binding Zdjecie}" HeightRequest="120" Margin="8,4,8,8" />
+                            <VerticalStackLayout>
+                                <Label FontSize="Large" Text="{Binding Nazwa}" />
+                                <Label Text="{Binding Skladniki}" />
+                                <Label Text="{Binding Rozmiar}" />
+                                <Label FontSize="Medium" Text="{Binding Cena}" />
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

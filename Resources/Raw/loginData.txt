@@ -1,0 +1,5 @@
+﻿administrator root Administrator Główny
+user user Domyślny User
+michal tomek123# Michal Nulski
+bartek_ 71u39_ Bartek Nebra
+nicola nicola Nicola Kaleta
