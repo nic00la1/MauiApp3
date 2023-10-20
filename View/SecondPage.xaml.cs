@@ -62,9 +62,28 @@ public partial class SecondPage : ContentPage
 
 		allView.Add(view);
 
- 		/* Zaladuj  dane z pliku pizza.txt i na kazda linijke
- 		 poza pierwsza, ktora jest nazwami kolumn, utworz
-		kazdy obiekt z danymi i wyswietl w aplikacji*/
+        /* Zaladuj  dane z pliku pizzas.txt i na kazda linijke
+ 		poza pierwsza, ktora jest nazwami kolumn, utworz
+		kazdy obiekt z danymi i wyswietl w aplikacji */
+        async Task LoadData()
+        {
+            using var stream = await FileSystem.OpenAppPackageFileAsync("pizzas.txt");
+            using var reader = new StreamReader(stream);
 
+			reader.ReadLine(); // Pomin jedna linijke
+
+            while (reader.Peek() >= 0)
+            {
+                string line = reader.ReadLine();
+				generateAnObject(new PizzaModel
+				{
+					Zdjecie = line.Split(';')[0],
+					Nazwa = line.Split(';')[1],
+					Skladniki = line.Split(';')[2],
+					Rozmiar = Convert.ToInt16(line.Split(';')[3]),
+					Cena = Convert.ToDouble(line.Split(";")[4])
+				});
+            }
+        }
     }
 }
